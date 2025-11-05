@@ -1,0 +1,140 @@
+{
+  "gitSyncId": "6903c23276976230880ef0bf_fd512567-6b58-4f05-b93b-237324a39ab9",
+  "moduleUUID": "800aa4d5-f12a-49f5-96a1-f0c0b0078664",
+  "type": "UI_MODULE",
+  "unpublishedModule": {
+    "dynamicBindingPathList": [
+      {
+        "key": "outputsForm[0].children[0].value"
+      },
+      {
+        "key": "outputsForm[0].children[1].value"
+      },
+      {
+        "key": "outputsForm[0].children[2].value"
+      },
+      {
+        "key": "outputsForm[0].children[3].value"
+      }
+    ],
+    "inputsForm": [
+      {
+        "children": [
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "#ff5a10",
+            "id": "neobwrcaih",
+            "label": "color",
+            "propertyName": "inputs.color"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "",
+            "id": "ettxcxengd",
+            "label": "logo",
+            "propertyName": "inputs.logo"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "Sign-In",
+            "id": "cpuxpmxlml",
+            "label": "buttonLabel",
+            "propertyName": "inputs.buttonLabel"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "demouser",
+            "id": "molpwsdhyv",
+            "label": "defaultUser",
+            "propertyName": "inputs.defaultUser"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "Automation@123",
+            "id": "qotikxjsmi",
+            "label": "defaultPassword",
+            "propertyName": "inputs.defaultPassword"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "",
+            "id": "vhyswbmazp",
+            "label": "nextPage",
+            "propertyName": "inputs.nextPage"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "#e5f1ff",
+            "id": "ornqvaktgg",
+            "label": "imageBackgroound",
+            "propertyName": "inputs.imageBackgroound"
+          }
+        ],
+        "id": "azwpuvmgxi",
+        "sectionName": ""
+      }
+    ],
+    "layouts": [
+      {
+        "dsl": {
+          "backgroundColor": "none",
+          "bottomRow": 850.0,
+          "canExtend": true,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "dynamicTriggerPathList": [],
+          "leftColumn": 0.0,
+          "minHeight": 715.0,
+          "parentColumnSpace": 1.0,
+          "parentRowSpace": 1.0,
+          "rightColumn": 1242.0,
+          "snapColumns": 64.0,
+          "snapRows": 124.0,
+          "topRow": 0.0,
+          "type": "CANVAS_WIDGET",
+          "version": 93.0,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
+      }
+    ],
+    "name": "Login",
+    "outputsForm": [
+      {
+        "children": [
+          {
+            "controlType": "INPUT_TEXT",
+            "id": "mwmojpccmr",
+            "label": "user",
+            "propertyName": "outputs.user",
+            "value": "{{User.text}}"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "id": "qfyopsdnaw",
+            "label": "password",
+            "propertyName": "outputs.password",
+            "value": "{{Password.text}}"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "id": "yizcjeojjv",
+            "label": "validUser",
+            "propertyName": "outputs.validUser",
+            "value": "{{LoginObject.validUser}}"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "id": "tgtsqibbhx",
+            "label": "token",
+            "propertyName": "outputs.token",
+            "value": "{{LoginObject.token}}"
+          }
+        ],
+        "id": "wclvggqbtq",
+        "sectionName": ""
+      }
+    ]
+  }
+}

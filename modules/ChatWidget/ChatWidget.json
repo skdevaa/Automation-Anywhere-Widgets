@@ -1,0 +1,109 @@
+{
+  "gitSyncId": "6903c23276976230880ef0bf_713b9395-2f15-4974-8d9a-be4c0f361374",
+  "moduleUUID": "abf54334-bd4b-48d0-99c1-67970e9d022d",
+  "type": "UI_MODULE",
+  "unpublishedModule": {
+    "dynamicBindingPathList": [
+      {
+        "key": "outputsForm[0].children[0].value"
+      }
+    ],
+    "inputsForm": [
+      {
+        "children": [
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "",
+            "id": "cnsqajpoqw",
+            "label": "projectId",
+            "propertyName": "inputs.projectId"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "",
+            "id": "qstwebxwwe",
+            "label": "secret",
+            "propertyName": "inputs.secret"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "",
+            "id": "atbvofieoh",
+            "label": "apiKey",
+            "propertyName": "inputs.apiKey"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "",
+            "id": "eucizvmyjc",
+            "label": "baseURL",
+            "propertyName": "inputs.baseURL"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "",
+            "id": "eysumjeahg",
+            "label": "chatName",
+            "propertyName": "inputs.chatName"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "false",
+            "id": "rwoppvklyt",
+            "label": "persist",
+            "propertyName": "inputs.persist"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "black",
+            "id": "bknihqmimm",
+            "label": "textColor",
+            "propertyName": "inputs.textColor"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "AI Assistant",
+            "id": "hcunsyobup",
+            "label": "title",
+            "propertyName": "inputs.title"
+          }
+        ],
+        "id": "wfqynvkrja",
+        "sectionName": ""
+      }
+    ],
+    "layouts": [
+      {
+        "dsl": {
+          "backgroundColor": "none",
+          "bottomRow": 760.0,
+          "canExtend": true,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "dynamicTriggerPathList": [],
+          "leftColumn": 0.0,
+          "minHeight": 715.0,
+          "parentColumnSpace": 1.0,
+          "parentRowSpace": 1.0,
+          "rightColumn": 1242.0,
+          "snapColumns": 64.0,
+          "snapRows": 124.0,
+          "topRow": 0.0,
+          "type": "CANVAS_WIDGET",
+          "version": 93.0,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
+      }
+    ],
+    "name": "ChatWidget",
+    "outputsForm": [
+      {
+        "children": [],
+        "id": "zqwqghtmdf",
+        "sectionName": ""
+      }
+    ]
+  }
+}

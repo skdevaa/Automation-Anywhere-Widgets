@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "{{Chat_Controller.config.emoji === \"yes\" ? appsmith.theme.colors.primaryColor : \"#E0DEDE\" }}",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "new-person",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "wn2lfgf0iy",
+  "leftColumn": 14,
+  "minWidth": 50,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 5,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "onClick": "{{Chat_Controller.config.emoji = (Chat_Controller.config.emoji === \"yes\" ) ? \"no\" : \"yes\"}}",
+  "parentColumnSpace": 7.28125,
+  "parentId": "module-canvas-0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 16,
+  "tooltip": "Enable Emoji responses",
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "kfhepgetwz",
+  "widgetName": "EmojiSwitch"
+}

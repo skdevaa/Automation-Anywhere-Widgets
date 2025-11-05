@@ -1,0 +1,18 @@
+{
+  "gitSyncId": "69085e3b76976230880f5488_e1def9b9-4409-465c-87ea-6618ef3738ef",
+  "id": "AAChatWidget_Chat_Controller",
+  "isPublic": false,
+  "unpublishedCollection": {
+    "contextType": "MODULE",
+    "moduleId": "AAChatWidget",
+    "name": "Chat_Controller",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "config",
+        "value": "{\n  baseURL: inputs.baseURL,\n  apiKey: inputs.apiKey,\n  secret: inputs.secret,\n  projectId: inputs.projectId,\n  title: inputs.title,\n  agentId: \"\",\n  emoji: \"no\",\n  chatName: inputs.chatName,\n  chatId: \"\",\n  persist: typeof inputs.persist === 'boolean' ? inputs.persist : (/^(?:true|1|yes|y|on)$/i).test((inputs.persist ?? '').toString().trim()),\n  textColor: inputs.textColor,\n  messages: []\n}"
+      }
+    ]
+  }
+}

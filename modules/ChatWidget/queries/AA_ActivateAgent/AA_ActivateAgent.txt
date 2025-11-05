@@ -1,0 +1,6 @@
+{
+  "chat_id" : "{{Chat_Controller.config.chatId}}",
+  "project_id" : "{{Chat_Controller.config.projectId}}",
+  "agent_id" : "{{Chat_Controller.config.agentId}}"
+
+}
