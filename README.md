@@ -1,11 +1,8 @@
-# Automation-Anywhere-Widgets!([(https://www.automationanywhere.com/sites/default/files/images/default-images/logo-aa-new.svg)])
 
-This packageis built using Agentic Solutions Workspace. T
+<img width="150" height="150" alt="aai" src="https://github.com/user-attachments/assets/0b4744d7-4aa6-421b-8206-3b6b254d267c" />
+
+# Automation-Anywhere-Widgets
 
 
+This package is built using Agentic Solutions Workspace. T
 
-### [Github](https://github.com/appsmithorg/appsmith) • [Docs](https://docs.appsmith.com/?utm_source=github&utm_medium=social&utm_content=appsmith_docs&utm_campaign=null&utm_term=appsmith_docs) • [Community](https://community.appsmith.com/) • [Tutorials](https://github.com/appsmithorg/appsmith/tree/update/readme#tutorials) • [Youtube](https://www.youtube.com/appsmith) • [Discord](https://discord.gg/rBTTVJp)
-
-##### You can visit the application using the below link
-
-###### [![](https://assets.appsmith.com/git-sync/Buttons.svg) ](https://aisolutions.automationanywhere.com/applications/6906811676976230880f3b92/pages) [![](https://assets.appsmith.com/git-sync/Buttons2.svg)](https://aisolutions.automationanywhere.com/applications/6906811676976230880f3b92/pages/edit)
