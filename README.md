@@ -4,5 +4,5 @@
 # Automation-Anywhere-Widgets
 
 
-This package is built using Agentic Solutions Workspace. 
+This package is built using Agentic Solutions Workspace. It provides ASW Widgets for the A360 and Enterprise Knowledge solutions
 
