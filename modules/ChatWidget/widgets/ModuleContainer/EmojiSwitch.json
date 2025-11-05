@@ -2,7 +2,7 @@
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 4,
-  "boxShadow": "none",
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "buttonColor": "{{Chat_Controller.config.emoji === \"yes\" ? appsmith.theme.colors.primaryColor : \"#E0DEDE\" }}",
   "buttonVariant": "PRIMARY",
   "dynamicBindingPathList": [
@@ -11,6 +11,9 @@
     },
     {
       "key": "buttonColor"
+    },
+    {
+      "key": "boxShadow"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -20,6 +23,12 @@
     },
     {
       "key": "onClick"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
     }
   ],
   "dynamicTriggerPathList": [

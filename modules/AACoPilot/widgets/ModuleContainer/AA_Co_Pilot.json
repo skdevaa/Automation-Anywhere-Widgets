@@ -2,8 +2,8 @@
   "animateLoading": true,
   "borderOpacity": 100,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "borderWidth": 1,
-  "bottomRow": 76,
+  "borderWidth": "0",
+  "bottomRow": 80,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "dynamicBindingPathList": [
     {
@@ -17,6 +17,14 @@
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "start",
   "isLoading": false,

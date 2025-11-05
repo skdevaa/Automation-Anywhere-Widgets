@@ -11,13 +11,13 @@
       "key": "theme"
     },
     {
+      "key": "defaultModel"
+    },
+    {
       "key": "borderRadius"
     },
     {
       "key": "boxShadow"
-    },
-    {
-      "key": "defaultModel"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -27,6 +27,12 @@
     },
     {
       "key": "onUpload"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
     }
   ],
   "dynamicTriggerPathList": [

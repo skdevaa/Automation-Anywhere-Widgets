@@ -1,9 +1,9 @@
 {
-  "backgroundColor": "#FFFFFF",
+  "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 67,
+  "bottomRow": 68,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "defaultModel": "{{ { \n\t\n\tmessage: \"\",\n\tresponse: \"\",\n\temoji : Chat_Controller.config.emoji,\n\t\n\tdata: \nChat_Controller.config.messages,\n\n\ttitle: Chat_Controller.config.title,\n\t\n\tchatId : Chat_Controller.config.chatId,\n\t\n\tprojectId: Chat_Controller.config.projectId,\n\t\n\tagentId: Chat_Controller.config.agentId,\n\n\tapiKey : Chat_Controller.config.apiKey,\n\n\tsecret : Chat_Controller.config.secret,\n\n\tbase: Chat_Controller.config.baseURL,\n\ttextColor: Chat_Controller.config.textColor\n} }}\n\n",
   "dynamicBindingPathList": [
@@ -18,6 +18,9 @@
     },
     {
       "key": "defaultModel"
+    },
+    {
+      "key": "backgroundColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -27,6 +30,15 @@
     },
     {
       "key": "onUpload"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "backgroundColor"
     }
   ],
   "dynamicTriggerPathList": [
@@ -62,7 +74,7 @@
   "onSend": "{{Chat_Controller.onSend(AI_Assistant.model.message,AI_Assistant.model.response)}}",
   "onUpload": "{{Chat_Controller.onUpload(AI_Assistant.model.message)}}",
   "parentColumnSpace": 19.9375,
-  "parentId": "agkbvpl8pj",
+  "parentId": "module-canvas-0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 64,
