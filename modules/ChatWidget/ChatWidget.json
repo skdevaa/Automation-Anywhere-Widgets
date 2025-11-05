@@ -55,7 +55,7 @@
           },
           {
             "controlType": "INPUT_TEXT",
-            "defaultValue": "black",
+            "defaultValue": "white",
             "id": "bknihqmimm",
             "label": "textColor",
             "propertyName": "inputs.textColor"
