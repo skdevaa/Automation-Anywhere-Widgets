@@ -27,7 +27,7 @@
     "fullyQualifiedName": "Chat_Controller.onLoad",
     "moduleId": "AAChatWidget",
     "name": "onLoad",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }

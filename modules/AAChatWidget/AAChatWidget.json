@@ -61,6 +61,13 @@
             "id": "isrxgjsvhv",
             "label": "textColor",
             "propertyName": "inputs.textColor"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "",
+            "id": "ururpjlfgt",
+            "label": "agentId",
+            "propertyName": "inputs.agentId"
           }
         ],
         "id": "gqixswepbg",
