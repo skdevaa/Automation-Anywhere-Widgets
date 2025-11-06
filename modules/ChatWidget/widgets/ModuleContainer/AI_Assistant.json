@@ -1,5 +1,5 @@
 {
-  "backgroundColor": "#FFFFFF",
+  "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
   "borderColor": "#E0DEDE",
   "borderRadius": "0.375rem",
   "borderWidth": "0",
@@ -12,6 +12,9 @@
     },
     {
       "key": "defaultModel"
+    },
+    {
+      "key": "backgroundColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -21,6 +24,9 @@
     },
     {
       "key": "onUpload"
+    },
+    {
+      "key": "backgroundColor"
     }
   ],
   "dynamicTriggerPathList": [

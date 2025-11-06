@@ -13,35 +13,35 @@
         "children": [
           {
             "controlType": "INPUT_TEXT",
-            "defaultValue": "9fd0b3f83ab74aff92d88b",
+            "defaultValue": "",
             "id": "cnsqajpoqw",
             "label": "projectId",
             "propertyName": "inputs.projectId"
           },
           {
             "controlType": "INPUT_TEXT",
-            "defaultValue": "c23/zIMG6ZHy0uYr5fSjF++bIOlmS5jwV71yjvJwRa0=",
+            "defaultValue": "",
             "id": "qstwebxwwe",
             "label": "secret",
             "propertyName": "inputs.secret"
           },
           {
             "controlType": "INPUT_TEXT",
-            "defaultValue": "329fc77f-a48e-46df-982d-72a760199fa3",
+            "defaultValue": "",
             "id": "atbvofieoh",
             "label": "apiKey",
             "propertyName": "inputs.apiKey"
           },
           {
             "controlType": "INPUT_TEXT",
-            "defaultValue": "https://api.getodin.ai",
+            "defaultValue": "",
             "id": "eucizvmyjc",
             "label": "baseURL",
             "propertyName": "inputs.baseURL"
           },
           {
             "controlType": "INPUT_TEXT",
-            "defaultValue": "AppSmith",
+            "defaultValue": "",
             "id": "eysumjeahg",
             "label": "chatName",
             "propertyName": "inputs.chatName"
