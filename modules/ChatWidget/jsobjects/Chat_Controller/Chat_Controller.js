@@ -16,6 +16,10 @@ export default {
 
   async onLoad() {
     try {
+			
+			while( this.config.apiKey === undefined) {
+				
+			}
 
 				let agents = await this.getAgents();
 			  this.config.agentId = agents[0].code;

@@ -27,7 +27,7 @@
     "fullyQualifiedName": "Chat_Controller.onLoad",
     "moduleId": "ChatWidget",
     "name": "onLoad",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": true
   }
 }
