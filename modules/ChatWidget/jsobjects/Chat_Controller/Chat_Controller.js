@@ -107,6 +107,7 @@ export default {
   },
 
   async getAgents() {
+	 if ( Agents.options === undefined) {
 			// Ensure correct casing of keys passed into your action
 			const response = await AA_GetAgents.run({
 				projectId: inputs.projectId,
@@ -122,7 +123,10 @@ export default {
 				code: agent.id,
 				name: agent.name,
 			}));
-		
+		}
+		else {
+			return Agents.options;
+		}
   },
 	
 	async setAgentId(agentId) {
