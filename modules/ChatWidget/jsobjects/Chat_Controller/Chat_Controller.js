@@ -92,7 +92,7 @@ export default {
       }
 		}
 		catch {
-			await this.onLoad();
+     console.log("Chat Config",this.config)
 		}
   }, 
 
