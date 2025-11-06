@@ -16,7 +16,8 @@ export default {
 
   async onLoad() {
     try {
-
+				let agents = await this.getAgents();
+			  this.config.agentId = agents[0].code;
 				if (this.config.chatId === "") {
 					  let response = await AA_CreateChat.run({
 						baseURL: this.config.baseURL,
@@ -104,7 +105,6 @@ export default {
   },
 
   async getAgents() {
-		 try {
 			// Ensure correct casing of keys passed into your action
 			const response = await AA_GetAgents.run({
 				projectId: this.config.projectId,
@@ -120,10 +120,6 @@ export default {
 				code: agent.id,
 				name: agent.name,
 			}));
-		} catch (e) {
-      // swallow or log
-      // console.log("onLoad error:", e);
-    }
 		
   },
 	
