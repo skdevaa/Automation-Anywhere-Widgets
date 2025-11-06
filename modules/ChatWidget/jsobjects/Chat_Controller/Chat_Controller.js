@@ -104,10 +104,6 @@ export default {
   },
 
   async getAgents() {			
-	 while( inputs === undefined) {
-				
-	 };
-
 		// Ensure correct casing of keys passed into your action
 		const response = await AA_GetAgents.run({
 			projectId: inputs.projectId,
@@ -118,11 +114,14 @@ export default {
 		const list = Array.isArray(response?.agents)
 		? response.agents
 		: Object.values(response?.agents || {});
-
-		return list.map((agent) => ({
+		
+		let agents = 	list.map((agent) => ({
 			code: agent.id,
 			name: agent.name,
 		}));
+		this.config.agentId = agents[0].code;
+		this.setAgentId(this.config.agentId);
+		return agents;
 	
   },
 	
