@@ -104,29 +104,26 @@ export default {
   },
 
   async getAgents() {			
-	 while( inputs.apiKey === undefined) {
+	 while( inputs === undefined) {
 				
 	 };
-	 if ( Agents.options === undefined) {
-			// Ensure correct casing of keys passed into your action
-			const response = await AA_GetAgents.run({
-				projectId: inputs.projectId,
-				apiKey: inputs.apiKey,
-				secret: inputs.secret
-			});
 
-			const list = Array.isArray(response?.agents)
-				? response.agents
-				: Object.values(response?.agents || {});
+		// Ensure correct casing of keys passed into your action
+		const response = await AA_GetAgents.run({
+			projectId: inputs.projectId,
+			apiKey: inputs.apiKey,
+			secret: inputs.secret
+		});
 
-			return list.map((agent) => ({
-				code: agent.id,
-				name: agent.name,
-			}));
-		}
-		else {
-			return Agents.options;
-		}
+		const list = Array.isArray(response?.agents)
+		? response.agents
+		: Object.values(response?.agents || {});
+
+		return list.map((agent) => ({
+			code: agent.id,
+			name: agent.name,
+		}));
+	
   },
 	
 	async setAgentId(agentId) {
