@@ -29,9 +29,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "onDropdownOpen"
     }
   ],
   "dynamicTriggerPathList": [
@@ -62,7 +59,7 @@
   "mobileRightColumn": 59,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onDropdownOpen": "{{Chat_Controller.getAgents.data}}",
+  "onDropdownOpen": "",
   "onOptionChange": "{{Chat_Controller.setAgentId(Agents.selectedOptionValue)}}",
   "optionLabel": "name",
   "optionValue": "code",
