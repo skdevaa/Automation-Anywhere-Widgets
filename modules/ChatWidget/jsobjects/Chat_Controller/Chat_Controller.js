@@ -107,13 +107,12 @@ export default {
 		this.config.messages = updated;
   },
 
-  async getAgents() {			
-		// Ensure correct casing of keys passed into your action
-		const response = await AA_GetAgents.run({
-			projectId: inputs.projectId,
-			apiKey: inputs.apiKey,
-			secret: inputs.secret
-		});
+  async getAgents() {
+    const response = await AA_GetAgents.run({
+      projectId: this.config.projectId,
+      apiKey: this.config.apiKey,
+      secret: this.config.secret,
+    });
 
 		const list = Array.isArray(response?.agents)
 		? response.agents
@@ -129,7 +128,7 @@ export default {
 	
 	async setAgentId(agentId) {
 		this.config.agentId = agentId
-		await AA_ActivateAgent.run({ chatId: this.config.chatId, projectId: inputs.projectId , agentId: this.config.agentId, apiKey :inputs.apiKey , secret : inputs.secret })
+		await AA_ActivateAgent.run({ chatId: this.config.chatId, projectId: this.config.projectId , agentId: this.config.agentId, apiKey :this.config.apiKey, secret : this.config.secret })
 	},
 
 	
