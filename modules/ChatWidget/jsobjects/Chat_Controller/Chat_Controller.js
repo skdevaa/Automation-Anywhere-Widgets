@@ -15,14 +15,7 @@ export default {
   },
 
   async onLoad() {
-    try {
-			
-			while( this.config.apiKey === undefined) {
-				
-			}
-
-				let agents = await this.getAgents();
-			  this.config.agentId = agents[0].code;
+		try{
 				if (this.config.chatId === "") {
 					  let response = await AA_CreateChat.run({
 						baseURL: this.config.baseURL,
@@ -110,7 +103,10 @@ export default {
 		this.config.messages = updated;
   },
 
-  async getAgents() {
+  async getAgents() {			
+	 while( inputs.apiKey === undefined) {
+				
+	 };
 	 if ( Agents.options === undefined) {
 			// Ensure correct casing of keys passed into your action
 			const response = await AA_GetAgents.run({
