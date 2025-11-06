@@ -17,8 +17,6 @@ export default {
   async onLoad() {
     try {
 
-				let agents = await this.getAgents();
-				this.config.agentId = agents[0].code;
 				if (this.config.chatId === "") {
 					  let response = await AA_CreateChat.run({
 						baseURL: this.config.baseURL,
@@ -106,21 +104,27 @@ export default {
   },
 
   async getAgents() {
-    // Ensure correct casing of keys passed into your action
-    const response = await AA_GetAgents.run({
-      projectId: this.config.projectId,
-      apiKey: this.config.apiKey,
-      secret: this.config.secret,
-    });
+		 try {
+			// Ensure correct casing of keys passed into your action
+			const response = await AA_GetAgents.run({
+				projectId: this.config.projectId,
+				apiKey: this.config.apiKey,
+				secret: this.config.secret,
+			});
 
-    const list = Array.isArray(response?.agents)
-      ? response.agents
-      : Object.values(response?.agents || {});
+			const list = Array.isArray(response?.agents)
+				? response.agents
+				: Object.values(response?.agents || {});
 
-    return list.map((agent) => ({
-      code: agent.id,
-      name: agent.name,
-    }));
+			return list.map((agent) => ({
+				code: agent.id,
+				name: agent.name,
+			}));
+		} catch (e) {
+      // swallow or log
+      // console.log("onLoad error:", e);
+    }
+		
   },
 	
 	async setAgentId(agentId) {
