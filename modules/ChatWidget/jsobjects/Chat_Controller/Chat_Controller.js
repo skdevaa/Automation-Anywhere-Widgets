@@ -1,11 +1,11 @@
 export default {
-  // Internal runtime config; will be hydrated from inputs lazily.
+  // Single source of truth used by all actions + APIs
   config: {
     baseURL: "",
     apiKey: "",
     secret: "",
+    title: "",
     projectId: "",
-    title: "AI Assistant",
     agentId: "",
     emoji: "no",
     chatName: "",
@@ -15,53 +15,46 @@ export default {
     messages: [],
   },
 
-  // --- helpers ----------------------------------------------------------
-
-  getSafeInputs() {
-    // "inputs" is injected by Appsmith for modules; guard in case it's not ready
+  // ---- internal: keep config in sync with module inputs ----
+  syncFromInputs() {
+    let i = {};
     try {
-      if (typeof inputs === "object" && inputs) return inputs;
+      if (typeof inputs === "object" && inputs) {
+        i = inputs;
+      }
     } catch (e) {
-      // swallow; we'll fall back to existing config
+      // inputs not ready yet; leave i as {}
     }
-    return {};
+
+    // Only overwrite when there's something to use
+    this.config.baseURL = i.baseURL || this.config.baseURL || "";
+    this.config.apiKey = i.apiKey || this.config.apiKey || "";
+    this.config.secret = i.secret || this.config.secret || "";
+    this.config.projectId = i.projectId || this.config.projectId || "";
+    this.config.title = i.title || this.config.title || "AI Assistant";
+    this.config.chatName = i.chatName || this.config.chatName || "Appsmith";
+    this.config.textColor = i.textColor || this.config.textColor || "black";
+
+    if (typeof i.persist === "boolean") {
+      this.config.persist = i.persist;
+    } else if (i.persist != null) {
+      this.config.persist = /^(?:true|1|yes|y|on)$/i.test(
+        String(i.persist).trim()
+      );
+    }
   },
 
-  syncConfigFromInputs() {
-    const i = this.getSafeInputs();
-
-    // Only override when we actually have a value
-    const parsedPersist =
-      typeof i.persist === "boolean"
-        ? i.persist
-        : /^(?:true|1|yes|y|on)$/i.test(
-            (i.persist ?? this.config.persist ?? "false").toString().trim()
-          );
-
-    this.config = {
-      ...this.config,
-      baseURL: i.baseURL ?? this.config.baseURL ?? "",
-      apiKey: i.apiKey ?? this.config.apiKey ?? "",
-      secret: i.secret ?? this.config.secret ?? "",
-      projectId: i.projectId ?? this.config.projectId ?? "",
-      title: i.title ?? this.config.title ?? "AI Assistant",
-      chatName: i.chatName ?? this.config.chatName ?? "",
-      textColor: i.textColor ?? this.config.textColor ?? "black",
-      persist: parsedPersist,
-      // keep existing chatId/agentId/messages if already set
-      chatId: this.config.chatId ?? "",
-      agentId: this.config.agentId ?? "",
-      messages: this.config.messages || [],
-      emoji: this.config.emoji ?? "no",
-    };
-  },
-
-  // --- lifecycle --------------------------------------------------------
+  // ---- lifecycle -------------------------------------------------------
 
   async onLoad() {
-    try {
-      this.syncConfigFromInputs();
+    this.syncFromInputs();
 
+    // If we still don't have required creds, do nothing (prevents errors)
+    if (!this.config.baseURL || !this.config.apiKey || !this.config.secret || !this.config.projectId) {
+      return;
+    }
+
+    try {
       const agents = await this.getAgents();
       if (agents?.length) {
         this.config.agentId = agents[0].code;
@@ -87,31 +80,30 @@ export default {
             chatId: this.config.chatId,
             agentId: this.config.agentId,
           },
-          this.config.persist,
+          this.config.persist
         );
 
         this.config.messages = [];
       } else {
-        const prior = this.config.messages || [];
         await storeValue(
           "ChatWidget",
           {
-            messages: prior,
+            messages: this.config.messages || [],
             chatId: this.config.chatId,
             agentId: this.config.agentId,
           },
-          this.config.persist,
+          this.config.persist
         );
       }
     } catch (e) {
-      // optionally log: console.log("Chat onLoad error", e);
+      // swallow / log as needed
     }
   },
 
-  // --- chat actions -----------------------------------------------------
+  // ---- chat helpers ----------------------------------------------------
 
   async newChat() {
-    this.syncConfigFromInputs();
+    this.syncFromInputs();
 
     const response = await AA_CreateChat.run({
       baseURL: this.config.baseURL,
@@ -132,12 +124,12 @@ export default {
         chatId: this.config.chatId,
         agentId: this.config.agentId,
       },
-      this.config.persist,
+      this.config.persist
     );
   },
 
   async onUpload(message) {
-    this.syncConfigFromInputs();
+    this.syncFromInputs();
 
     const prior = this.config.messages || [];
     const messages = [...prior, { sender: "user", text: message }];
@@ -149,16 +141,16 @@ export default {
         chatId: this.config.chatId,
         agentId: this.config.agentId,
       },
-      this.config.persist,
+      this.config.persist
     );
 
     this.config.messages = messages;
   },
 
   async onSend(message, response) {
-    this.syncConfigFromInputs();
+    this.syncFromInputs();
 
-    // user message
+    // append user
     const prior = this.config.messages || [];
     const messages = [...prior, { sender: "user", text: message }];
 
@@ -169,12 +161,12 @@ export default {
         chatId: this.config.chatId,
         agentId: this.config.agentId,
       },
-      this.config.persist,
+      this.config.persist
     );
 
     this.config.messages = messages;
 
-    // bot message
+    // append bot
     const updated = [...this.config.messages, { sender: "bot", text: response }];
 
     await storeValue(
@@ -184,16 +176,20 @@ export default {
         chatId: this.config.chatId,
         agentId: this.config.agentId,
       },
-      this.config.persist,
+      this.config.persist
     );
 
     this.config.messages = updated;
   },
 
-  // --- APIs -------------------------------------------------------------
+  // ---- backend calls ---------------------------------------------------
 
   async getAgents() {
-    this.syncConfigFromInputs();
+    this.syncFromInputs();
+
+    if (!this.config.projectId || !this.config.apiKey || !this.config.secret) {
+      return [];
+    }
 
     const response = await AA_GetAgents.run({
       projectId: this.config.projectId,
@@ -212,15 +208,17 @@ export default {
   },
 
   async setAgentId(agentId) {
-    this.syncConfigFromInputs();
+    this.syncFromInputs();
 
     this.config.agentId = agentId;
 
+    if (!this.config.chatId || !this.config.projectId) return;
+
     await AA_ActivateAgent.run({
       chatId: this.config.chatId,
-      projectId: this.config.projectId,
+      projectId: this.config.projectId, // <-- correct key
       agentId: this.config.agentId,
-      apiKey: this.config.apiKey,
+      apiKey: this.config.apiKey,       // <-- correct key
       secret: this.config.secret,
     });
   },

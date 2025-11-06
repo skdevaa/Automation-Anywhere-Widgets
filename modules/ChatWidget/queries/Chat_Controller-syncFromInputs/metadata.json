@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "f424e486-e424-4f03-aeff-8804f9dec2c9_a1844f7d-12af-412b-ac40-aa0d0d435f24",
-  "id": "ChatWidget_Chat_Controller.getSafeInputs",
+  "gitSyncId": "e6f85995-fe58-4765-98b5-eca921fdf085_705a8824-17af-4d83-aa78-d776840881a3",
+  "id": "ChatWidget_Chat_Controller.syncFromInputs",
   "isPublic": false,
   "pluginId": "js-plugin",
   "pluginType": "JS",
@@ -24,9 +24,9 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "Chat_Controller.getSafeInputs",
+    "fullyQualifiedName": "Chat_Controller.syncFromInputs",
     "moduleId": "ChatWidget",
-    "name": "getSafeInputs",
+    "name": "syncFromInputs",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
