@@ -2,7 +2,7 @@
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 4,
-  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
   "dynamicBindingPathList": [
@@ -11,24 +11,12 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "boxShadow"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "onClick"
-    },
-    {
-      "key": "borderRadius"
-    },
-    {
-      "key": "boxShadow"
-    },
-    {
-      "key": "buttonColor"
     }
   ],
   "dynamicTriggerPathList": [
@@ -41,7 +29,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "g7965zlsg3",
-  "leftColumn": 3,
+  "leftColumn": 2,
   "minWidth": 50,
   "mobileBottomRow": 4,
   "mobileLeftColumn": 1,
@@ -54,7 +42,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
-  "rightColumn": 5,
+  "rightColumn": 6,
   "tooltip": "New Chat",
   "topRow": 0,
   "type": "ICON_BUTTON_WIDGET",

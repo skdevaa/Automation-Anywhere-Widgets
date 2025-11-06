@@ -8,7 +8,7 @@
         "children": [
           {
             "controlType": "INPUT_TEXT",
-            "defaultValue": "t",
+            "defaultValue": "",
             "id": "jmxruawuaj",
             "label": "AA_CopilotURL",
             "propertyName": "inputs.AA_CopilotURL"
@@ -22,22 +22,22 @@
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 850,
+          "bottomRow": 720.0,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "dynamicTriggerPathList": [],
-          "leftColumn": 0,
-          "minHeight": 616,
-          "parentColumnSpace": 1,
-          "parentRowSpace": 1,
-          "rightColumn": 1242,
-          "snapColumns": 64,
-          "snapRows": 124,
-          "topRow": 0,
+          "leftColumn": 0.0,
+          "minHeight": 616.0,
+          "parentColumnSpace": 1.0,
+          "parentRowSpace": 1.0,
+          "rightColumn": 1242.0,
+          "snapColumns": 64.0,
+          "snapRows": 124.0,
+          "topRow": 0.0,
           "type": "CANVAS_WIDGET",
-          "version": 93,
+          "version": 93.0,
           "widgetId": "0",
           "widgetName": "MainContainer"
         }

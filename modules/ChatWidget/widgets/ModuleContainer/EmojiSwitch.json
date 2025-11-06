@@ -2,7 +2,7 @@
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 4,
-  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "boxShadow": "none",
   "buttonColor": "{{Chat_Controller.config.emoji === \"yes\" ? appsmith.theme.colors.primaryColor : \"#E0DEDE\" }}",
   "buttonVariant": "PRIMARY",
   "dynamicBindingPathList": [
@@ -11,9 +11,6 @@
     },
     {
       "key": "buttonColor"
-    },
-    {
-      "key": "boxShadow"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -23,12 +20,6 @@
     },
     {
       "key": "onClick"
-    },
-    {
-      "key": "borderRadius"
-    },
-    {
-      "key": "boxShadow"
     }
   ],
   "dynamicTriggerPathList": [
@@ -41,7 +32,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "wn2lfgf0iy",
-  "leftColumn": 12,
+  "leftColumn": 10,
   "minWidth": 50,
   "mobileBottomRow": 5,
   "mobileLeftColumn": 1,
@@ -54,7 +45,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
-  "rightColumn": 14,
+  "rightColumn": 12,
   "tooltip": "Enable Emoji responses",
   "topRow": 0,
   "type": "ICON_BUTTON_WIDGET",

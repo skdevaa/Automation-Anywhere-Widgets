@@ -26,17 +26,11 @@
     },
     {
       "key": "onOptionChange"
-    },
-    {
-      "key": "borderRadius"
     }
   ],
   "dynamicTriggerPathList": [
     {
       "key": "onOptionChange"
-    },
-    {
-      "key": "onDropdownOpen"
     }
   ],
   "isDisabled": false,
@@ -59,7 +53,6 @@
   "mobileRightColumn": 59,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onDropdownOpen": "",
   "onOptionChange": "{{Chat_Controller.setAgentId(Agents.selectedOptionValue)}}",
   "optionLabel": "name",
   "optionValue": "code",

@@ -11,7 +11,7 @@
     "variables": [
       {
         "name": "config",
-        "value": "{\n  baseURL: \"\",\n  apiKey: \"\",\n  secret: \"\",\n  title: \"\",\n  projectId: \"\",\n  agentId: \"\",\n  emoji: \"no\",\n  chatName: \"\",\n  chatId: \"\",\n  persist: false,\n  textColor: \"black\",\n  messages: []\n}"
+        "value": "{\n  baseURL: inputs.baseURL,\n  apiKey: inputs.apiKey,\n  secret: inputs.secret,\n  title: inputs.title,\n  projectId: inputs.projectId,\n  agentId: \"\",\n  emoji: \"no\",\n  chatName: inputs.chatName,\n  chatId: \"\",\n  persist: typeof inputs.persist === \"boolean\" ? inputs.persist : (/^(?:true|1|yes|y|on)$/i).test((inputs.persist ?? \"\").toString().trim()),\n  textColor: inputs.textColor,\n  messages: []\n}"
       }
     ]
   }
