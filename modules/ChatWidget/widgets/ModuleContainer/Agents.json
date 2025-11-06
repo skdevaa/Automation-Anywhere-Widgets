@@ -13,17 +13,11 @@
       "key": "borderRadius"
     },
     {
-      "key": "sourceData"
-    },
-    {
       "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
-    {
-      "key": "sourceData"
-    },
     {
       "key": "onOptionChange"
     }
@@ -64,7 +58,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 54,
   "serverSideFiltering": false,
-  "sourceData": "{{Chat_Controller.getAgents.data}}",
+  "sourceData": "",
   "topRow": 0,
   "type": "SELECT_WIDGET",
   "version": 1,

@@ -53,6 +53,7 @@ export default {
 			this.config.agentId = "";
       const agents = await this.getAgents();
       this.config.agentId = agents[0]?.code || this.config.agentId;
+			Agents.setOptions(agents)
 
       if (this.config.chatId === "") {
         const response = await AA_CreateChat.run({

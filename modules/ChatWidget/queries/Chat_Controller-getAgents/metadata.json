@@ -27,7 +27,7 @@
     "fullyQualifiedName": "Chat_Controller.getAgents",
     "moduleId": "ChatWidget",
     "name": "getAgents",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": true
   }
 }
