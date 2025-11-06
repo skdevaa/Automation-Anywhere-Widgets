@@ -16,8 +16,7 @@ export default {
 
   async onLoad() {
     try {
-				let agents = await this.getAgents();
-			  this.config.agentId = agents[0].code;
+
 				if (this.config.chatId === "") {
 					  let response = await AA_CreateChat.run({
 						baseURL: this.config.baseURL,
@@ -27,8 +26,11 @@ export default {
 						agentId: this.config.agentId,
 						chatName: this.config.chatName,
 					});
-
 					this.config.chatId = response?.chat_id || this.config.chatId;
+					
+					let agents = await this.getAgents();
+			    this.config.agentId = agents[0].code;
+					
 					await storeValue("ChatWidget", {
 						messages: [],
 						chatId: this.config.chatId,
