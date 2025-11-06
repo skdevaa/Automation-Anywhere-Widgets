@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "8fefd848-0953-43a8-8c4a-99be286d2d6a_fde8b0ab-4cd4-4a24-a98f-45ef458159fc",
-  "id": "ChatWidget_Chat_Controller.buildConfig",
+  "gitSyncId": "cdd6a699-032f-4d42-aff3-ed400e818a05_9c86bd28-1443-469f-b355-16ab9b416964",
+  "id": "ChatWidget_Chat_Controller.newChat",
   "isPublic": false,
   "pluginId": "js-plugin",
   "pluginType": "JS",
@@ -24,9 +24,9 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "Chat_Controller.buildConfig",
+    "fullyQualifiedName": "Chat_Controller.newChat",
     "moduleId": "ChatWidget",
-    "name": "buildConfig",
+    "name": "newChat",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

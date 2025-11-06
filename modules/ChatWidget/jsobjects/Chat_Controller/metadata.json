@@ -11,7 +11,7 @@
     "variables": [
       {
         "name": "config",
-        "value": "{}"
+        "value": "{\n  baseURL: \"\",\n  apiKey: \"\",\n  secret: \"\",\n  projectId: \"\",\n  title: \"AI Assistant\",\n  agentId: \"\",\n  emoji: \"no\",\n  chatName: \"\",\n  chatId: \"\",\n  persist: false,\n  textColor: \"black\",\n  messages: []\n}"
       }
     ]
   }
