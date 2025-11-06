@@ -16,6 +16,10 @@ export default {
 
   async onLoad() {
 		try{
+
+        let agents = await this.getAgents();
+				this.config.agentId = agents[0].code;
+		    this.setAgentId(this.config.agentId);
 				if (this.config.chatId === "") {
 					  let response = await AA_CreateChat.run({
 						baseURL: this.config.baseURL,
@@ -119,8 +123,6 @@ export default {
 			code: agent.id,
 			name: agent.name,
 		}));
-		this.config.agentId = agents[0].code;
-		this.setAgentId(this.config.agentId);
 		return agents;
 	
   },
