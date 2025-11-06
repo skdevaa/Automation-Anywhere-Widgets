@@ -17,6 +17,8 @@ export default {
   async onLoad() {
     try {
 
+				let agents = await this.getAgents();
+			  this.config.agentId = agents[0].code;
 				if (this.config.chatId === "") {
 					  let response = await AA_CreateChat.run({
 						baseURL: this.config.baseURL,
@@ -28,8 +30,6 @@ export default {
 					});
 					this.config.chatId = response?.chat_id || this.config.chatId;
 					
-					let agents = await this.getAgents();
-			    this.config.agentId = agents[0].code;
 					
 					await storeValue("ChatWidget", {
 						messages: [],
@@ -109,9 +109,9 @@ export default {
   async getAgents() {
 			// Ensure correct casing of keys passed into your action
 			const response = await AA_GetAgents.run({
-				projectId: this.config.projectId,
-				apiKey: this.config.apiKey,
-				secret: this.config.secret,
+				projectId: inputs.projectId,
+				apiKey: inputs.apiKey,
+				secret: inputs.secret
 			});
 
 			const list = Array.isArray(response?.agents)
@@ -127,7 +127,7 @@ export default {
 	
 	async setAgentId(agentId) {
 		this.config.agentId = agentId
-		await AA_ActivateAgent.run({ chatId: this.config.chatId, projectId: this.config.projectid , agentId: this.config.agentId, apiKey : this.config.apikey , secret : this.config.secret })
+		await AA_ActivateAgent.run({ chatId: this.config.chatId, projectId: inputs.projectId , agentId: this.config.agentId, apiKey :inputs.apiKey , secret : inputs.secret })
 	},
 
 	
