@@ -92,7 +92,7 @@ export default {
       }
 		}
 		catch {
-			this.onLoad();
+			await this.onLoad();
 		}
   }, 
 
