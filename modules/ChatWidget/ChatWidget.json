@@ -3,11 +3,6 @@
   "moduleUUID": "abf54334-bd4b-48d0-99c1-67970e9d022d",
   "type": "UI_MODULE",
   "unpublishedModule": {
-    "dynamicBindingPathList": [
-      {
-        "key": "outputsForm[0].children[0].value"
-      }
-    ],
     "inputsForm": [
       {
         "children": [
@@ -66,6 +61,13 @@
             "id": "hcunsyobup",
             "label": "title",
             "propertyName": "inputs.title"
+          },
+          {
+            "controlType": "INPUT_TEXT",
+            "defaultValue": "black",
+            "id": "uxrswdodtd",
+            "label": "messageColor",
+            "propertyName": "inputs.messageColor"
           }
         ],
         "id": "wfqynvkrja",
