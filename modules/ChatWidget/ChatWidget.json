@@ -64,7 +64,7 @@
           },
           {
             "controlType": "INPUT_TEXT",
-            "defaultValue": "black",
+            "defaultValue": "white",
             "id": "uxrswdodtd",
             "label": "messageColor",
             "propertyName": "inputs.messageColor"
