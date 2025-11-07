@@ -43,14 +43,14 @@
           },
           {
             "controlType": "INPUT_TEXT",
-            "defaultValue": "demouser",
+            "defaultValue": "",
             "id": "molpwsdhyv",
             "label": "defaultUser",
             "propertyName": "inputs.defaultUser"
           },
           {
             "controlType": "INPUT_TEXT",
-            "defaultValue": "Automation@123",
+            "defaultValue": "",
             "id": "qotikxjsmi",
             "label": "defaultPassword",
             "propertyName": "inputs.defaultPassword"
