@@ -16,6 +16,7 @@ export default {
 	 * @property {string} textColor - Message color for the widget UI.
    * @property {Array<{sender: "user"|"bot", text: string}>} messages - In-memory message history.
    */
+	
 	config: {
 		baseURL: inputs.baseURL,
 		apiKey: inputs.apiKey,
