@@ -1,5 +1,0 @@
-{
-        "username": "{{User.text}}", 
-        "password": "{{Password.text}}"
-    
-}

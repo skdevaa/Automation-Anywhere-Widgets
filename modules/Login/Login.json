@@ -108,28 +108,28 @@
             "id": "mwmojpccmr",
             "label": "user",
             "propertyName": "outputs.user",
-            "value": "{{User.text}}"
+            "value": "{{wt_User.text}}"
           },
           {
             "controlType": "INPUT_TEXT",
             "id": "qfyopsdnaw",
             "label": "password",
             "propertyName": "outputs.password",
-            "value": "{{Password.text}}"
+            "value": "{{wt_Password.text}}"
           },
           {
             "controlType": "INPUT_TEXT",
             "id": "yizcjeojjv",
             "label": "validUser",
             "propertyName": "outputs.validUser",
-            "value": "{{LoginObject.validUser}}"
+            "value": "{{js_loginObject.validUser}}"
           },
           {
             "controlType": "INPUT_TEXT",
             "id": "tgtsqibbhx",
             "label": "token",
             "propertyName": "outputs.token",
-            "value": "{{LoginObject.token}}"
+            "value": "{{js_loginObject.token}}"
           }
         ],
         "id": "wclvggqbtq",
