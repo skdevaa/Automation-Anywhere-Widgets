@@ -12,7 +12,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n        \"username\": \"{{wt_User.text}}\", \n        \"password\": \"{{wt_Password.text}}\"\n    \n}",
+      "body": "{\n        \"username\": \"{{wt_User.text}}\", \n        \"password\": \"{{wt_Password.text}}\"\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
