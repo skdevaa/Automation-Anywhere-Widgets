@@ -9,6 +9,7 @@ export default {
 		return  response.token
   },
 	
+	
 	async check_user() {
 		try {
 			this.token = await this.getToken();
